@@ -22,8 +22,9 @@
   <meta name="twitter:title" content="Austin Walker | MS Gulf Coast Real Estate" />
   <meta name="twitter:description" content="Homes for sale in Lucedale, Gulfport, Ocean Springs & across the Mississippi Gulf Coast." />
 
-  <!-- ── Google Search Console Verification (replace token) ─────────────────── -->
-  <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_TOKEN" /> -->
+  <!-- ── Google Search Console Verification ────────────────────────────────── -->
+  <!-- ACTIVATE: replace PASTE_YOUR_TOKEN_HERE with the token Google gives you  -->
+  <!-- <meta name="google-site-verification" content="PASTE_YOUR_TOKEN_HERE" /> -->
 
   <!-- ── JSON-LD Structured Data ────────────────────────────────────────────── -->
   <script type="application/ld+json">
@@ -65,7 +66,8 @@
   }
   </script>
 
-  <!-- ── Google Analytics 4 (replace G-XXXXXXXXXX) ─────────────────────────── -->
+  <!-- ── Google Analytics 4 ─────────────────────────────────────────────────── -->
+  <!-- ACTIVATE: remove the comment tags and replace G-XXXXXXXXXX with your ID  -->
   <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
@@ -73,6 +75,8 @@
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
+    // Track lead form submissions as conversions
+    function trackLead(type) { gtag('event','generate_lead',{event_category:type}); }
   </script>
   -->
 
