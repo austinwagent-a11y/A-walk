@@ -3,374 +3,558 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Austin Walker – HubSpot CRM</title>
+
+  <!-- ── Primary SEO ──────────────────────────────────────────────────────── -->
+  <title>Austin Walker | Mississippi Gulf Coast Real Estate Agent</title>
+  <meta name="description" content="Austin Walker is a Mississippi Gulf Coast real estate agent serving Lucedale, Gulfport, Ocean Springs, Jackson County, and George County. Browse homes for sale, get a free home valuation, and connect today." />
+  <meta name="keywords" content="Mississippi real estate, Lucedale homes for sale, Gulfport realtor, Ocean Springs real estate, Jackson County MS homes, George County real estate agent, Mississippi Gulf Coast homes" />
+  <link rel="canonical" href="https://austinwalkerrealestate.com/" />
+
+  <!-- ── Open Graph (Facebook, LinkedIn) ────────────────────────────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://austinwalkerrealestate.com/" />
+  <meta property="og:title" content="Austin Walker | Mississippi Gulf Coast Real Estate" />
+  <meta property="og:description" content="Find your dream home on the Mississippi Gulf Coast. Expert guidance for buyers and sellers in Lucedale, Gulfport, Ocean Springs & beyond." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80" />
+
+  <!-- ── Twitter Card ────────────────────────────────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Austin Walker | MS Gulf Coast Real Estate" />
+  <meta name="twitter:description" content="Homes for sale in Lucedale, Gulfport, Ocean Springs & across the Mississippi Gulf Coast." />
+
+  <!-- ── Google Search Console Verification (replace token) ─────────────────── -->
+  <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_TOKEN" /> -->
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "RealEstateAgent",
+        "@id": "https://austinwalkerrealestate.com/#agent",
+        "name": "Austin Walker Real Estate",
+        "url": "https://austinwalkerrealestate.com",
+        "description": "Mississippi Gulf Coast real estate agent specializing in residential properties for buyers and sellers across Lucedale, Gulfport, Ocean Springs, Jackson County, and George County.",
+        "email": "austinwagent@gmail.com",
+        "areaServed": [
+          { "@type": "City", "name": "Lucedale", "containedInPlace": { "@type": "State", "name": "Mississippi" } },
+          { "@type": "City", "name": "Gulfport", "containedInPlace": { "@type": "State", "name": "Mississippi" } },
+          { "@type": "City", "name": "Ocean Springs", "containedInPlace": { "@type": "State", "name": "Mississippi" } },
+          { "@type": "AdministrativeArea", "name": "Jackson County, Mississippi" },
+          { "@type": "AdministrativeArea", "name": "George County, Mississippi" }
+        ],
+        "memberOf": [
+          { "@type": "Organization", "name": "Mississippi REALTORS®" },
+          { "@type": "Organization", "name": "GCAR Real Estate" }
+        ],
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://austinwalkerrealestate.com/#website",
+        "url": "https://austinwalkerrealestate.com",
+        "name": "Austin Walker Real Estate",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://austinwalkerrealestate.com/#listings?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ── Google Analytics 4 (replace G-XXXXXXXXXX) ─────────────────────────── -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-<div class="app">
 
-  <!-- ── Sidebar ──────────────────────────────────────────────────────── -->
-  <aside class="sidebar">
-    <div class="sidebar-brand">
-      <div class="logo-icon">H</div>
-      <div class="brand-text">
-        <span class="brand-name">HubSpot CRM</span>
-        <span class="brand-sub">Austin Walker</span>
+<!-- ── Navigation ─────────────────────────────────────────────────────────── -->
+<header class="nav-wrap" id="nav">
+  <nav class="nav container">
+    <a href="/" class="nav-brand" aria-label="Austin Walker Real Estate Home">
+      <span class="nav-brand-icon">AW</span>
+      <span class="nav-brand-text">
+        <strong>Austin Walker</strong>
+        <small>Real Estate</small>
+      </span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#listings" class="nav-link">Listings</a></li>
+      <li><a href="#buy" class="nav-link">Buy</a></li>
+      <li><a href="#sell" class="nav-link">Sell</a></li>
+      <li><a href="#areas" class="nav-link">Areas</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#contact" class="nav-cta btn">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ── Hero ───────────────────────────────────────────────────────────────── -->
+<section class="hero" id="home" aria-label="Hero – Find your home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="hero-eyebrow">Mississippi Gulf Coast Real Estate</p>
+    <h1 class="hero-headline">Find Your Perfect Home<br>on the <em>Gulf Coast</em></h1>
+    <p class="hero-sub">Trusted guidance for buyers and sellers across Lucedale, Gulfport, Ocean Springs, and the entire Mississippi Gulf Coast.</p>
+    <div class="hero-actions">
+      <a href="#listings" class="btn btn-primary btn-lg">Browse Listings</a>
+      <a href="#sell" class="btn btn-outline-white btn-lg">Free Home Valuation</a>
+    </div>
+    <div class="hero-trust">
+      <span>✓ Mississippi REALTORS® Member</span>
+      <span>✓ GCAR Real Estate</span>
+      <span>✓ Local Gulf Coast Expert</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Stats Bar ──────────────────────────────────────────────────────────── -->
+<section class="stats-bar" aria-label="Agent statistics">
+  <div class="container stats-grid">
+    <div class="stat">
+      <span class="stat-n">50+</span>
+      <span class="stat-l">Homes Sold</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">5★</span>
+      <span class="stat-l">Client Rated</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">5+</span>
+      <span class="stat-l">Counties Served</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">$0</span>
+      <span class="stat-l">Cost to Start</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Listings ───────────────────────────────────────────────────────────── -->
+<section class="section" id="listings" aria-label="Property listings">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Active Listings &amp; Recent Sales</h2>
+      <p class="section-sub">Properties across the Mississippi Gulf Coast — updated live from our CRM.</p>
+      <div class="listing-tabs" role="tablist">
+        <button class="tab active" data-filter="all" role="tab">All</button>
+        <button class="tab" data-filter="For Sale" role="tab">For Sale</button>
+        <button class="tab" data-filter="Sold" role="tab">Sold</button>
       </div>
     </div>
-
-    <div class="sidebar-user">
-      <div class="avatar">AW</div>
-      <div class="user-info">
-        <div class="user-name">Austin Walker</div>
-        <div class="user-role">Account Owner</div>
+    <div id="listings-grid" class="listings-grid" aria-live="polite">
+      <div class="listings-loading">
+        <div class="spinner"></div>
+        <p>Loading listings…</p>
       </div>
     </div>
+    <div id="listings-empty" class="listings-empty" style="display:none">
+      <p>No listings match the selected filter.</p>
+    </div>
+  </div>
+</section>
 
-    <nav class="sidebar-nav">
-      <div class="nav-section-label">Main</div>
-
-      <a class="nav-item active" data-view="dashboard" onclick="navigate('dashboard')">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-        Dashboard
-      </a>
-
-      <a class="nav-item" data-view="contacts" onclick="navigate('contacts')">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        Contacts
-        <span class="nav-badge" id="nav-contacts-count">–</span>
-      </a>
-
-      <a class="nav-item" data-view="deals" onclick="navigate('deals')">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        Deals
-        <span class="nav-badge" id="nav-deals-count">–</span>
-      </a>
-
-      <a class="nav-item" data-view="companies" onclick="navigate('companies')">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 7l9-4 9 4M4 21V9m16 12V9M9 21V9m6 12V9"/></svg>
-        Companies
-        <span class="nav-badge" id="nav-companies-count">–</span>
-      </a>
-
-      <div class="nav-section-label" style="margin-top:10px">Activities</div>
-
-      <a class="nav-item" data-view="tasks" onclick="navigate('tasks')">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        Tasks
-      </a>
-
-      <div class="nav-section-label" style="margin-top:10px">Quick Links</div>
-
-      <a class="nav-item" href="https://app-na2.hubspot.com/contacts/246270512" target="_blank">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        Open HubSpot
-      </a>
-    </nav>
-  </aside>
-
-  <!-- ── Main ─────────────────────────────────────────────────────────── -->
-  <div class="main">
-
-    <!-- Topbar -->
-    <header class="topbar">
-      <div>
-        <span class="topbar-title" id="topbar-title">Dashboard</span>
-        <span class="topbar-subtitle" id="topbar-subtitle">Overview of your CRM</span>
+<!-- ── How It Works ───────────────────────────────────────────────────────── -->
+<section class="section section-light" id="services" aria-label="Our services">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Your Journey, Simplified</h2>
+      <p class="section-sub">Whether you're buying your first home or selling an investment property, Austin guides you every step of the way.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-icon step-icon-blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </div>
+        <h3>1. Search &amp; Discover</h3>
+        <p>Browse active listings across the Gulf Coast. Austin helps you identify homes that match your lifestyle, budget, and priorities.</p>
       </div>
-      <div class="topbar-spacer"></div>
-      <div class="topbar-search">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" id="global-search" placeholder="Search..." />
+      <div class="step-card">
+        <div class="step-icon step-icon-gold">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+        </div>
+        <h3>2. Tour &amp; Decide</h3>
+        <p>Schedule showings at your convenience. Austin provides honest, expert insight so you make the most informed decision possible.</p>
       </div>
-      <button class="btn btn-primary" id="new-btn" onclick="openNewModal()">
-        <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        New
-      </button>
-    </header>
+      <div class="step-card">
+        <div class="step-icon step-icon-green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+        </div>
+        <h3>3. Close &amp; Move In</h3>
+        <p>Negotiate the best deal, navigate paperwork, and close with confidence. Austin stays with you through handing over the keys.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Content -->
-    <div class="content">
-      <div id="no-token-banner" class="banner" style="display:none">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+<!-- ── Buyer Lead Form ─────────────────────────────────────────────────────── -->
+<section class="section section-navy" id="buy" aria-label="Buyer lead form">
+  <div class="container cta-split">
+    <div class="cta-copy">
+      <p class="eyebrow-light">For Buyers</p>
+      <h2>Ready to Start Your Home Search?</h2>
+      <p>Tell Austin what you're looking for and he'll send you matched listings the moment they hit the market — before most buyers even know they exist.</p>
+      <ul class="cta-benefits">
+        <li>✓ Exclusive off-market opportunities</li>
+        <li>✓ Expert price negotiation</li>
+        <li>✓ Local market insights</li>
+        <li>✓ No pressure, no obligation</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form class="lead-form" id="buyer-form" data-lead-type="Buyer" novalidate>
+        <h3 class="form-title">Find My Dream Home</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="b-fname">First Name *</label>
+            <input type="text" id="b-fname" name="firstname" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label for="b-lname">Last Name</label>
+            <input type="text" id="b-lname" name="lastname" placeholder="Doe" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="b-email">Email Address *</label>
+          <input type="email" id="b-email" name="email" placeholder="jane@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="b-phone">Phone Number</label>
+          <input type="tel" id="b-phone" name="phone" placeholder="(228) 555-0100" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="b-budget">Budget Range</label>
+            <select id="b-budget" name="budget">
+              <option value="">Select range…</option>
+              <option>Under $150,000</option>
+              <option>$150,000 – $250,000</option>
+              <option>$250,000 – $400,000</option>
+              <option>$400,000 – $600,000</option>
+              <option>$600,000+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="b-timeline">Timeline</label>
+            <select id="b-timeline" name="timeline">
+              <option value="">Select…</option>
+              <option>ASAP</option>
+              <option>1–3 months</option>
+              <option>3–6 months</option>
+              <option>6–12 months</option>
+              <option>Just browsing</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="b-message">Anything specific you're looking for?</label>
+          <textarea id="b-message" name="message" rows="3" placeholder="Bedrooms, school district, yard, pool…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Send My Home Matches →</button>
+        <p class="form-disclaimer">Your information is private. No spam, ever.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── Areas Served ────────────────────────────────────────────────────────── -->
+<section class="section" id="areas" aria-label="Areas served">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Areas We Serve</h2>
+      <p class="section-sub">Deep local knowledge across the Mississippi Gulf Coast and beyond.</p>
+    </div>
+    <div class="areas-grid">
+      <article class="area-card">
+        <div class="area-img" style="background-image:url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=70')"></div>
+        <div class="area-body">
+          <h3>Lucedale</h3>
+          <p>George County seat offering peaceful small-town living with easy access to the Gulf Coast.</p>
+        </div>
+      </article>
+      <article class="area-card">
+        <div class="area-img" style="background-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=70')"></div>
+        <div class="area-body">
+          <h3>Gulfport</h3>
+          <p>Mississippi's second-largest city with waterfront living, great schools, and thriving neighborhoods.</p>
+        </div>
+      </article>
+      <article class="area-card">
+        <div class="area-img" style="background-image:url('https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=600&q=70')"></div>
+        <div class="area-body">
+          <h3>Ocean Springs</h3>
+          <p>Charming arts district, Gulf views, and some of the most sought-after addresses on the Coast.</p>
+        </div>
+      </article>
+      <article class="area-card">
+        <div class="area-img" style="background-image:url('https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=600&q=70')"></div>
+        <div class="area-body">
+          <h3>Jackson County</h3>
+          <p>Sprawling county communities from Pascagoula to Moss Point — diverse options for every buyer.</p>
+        </div>
+      </article>
+      <article class="area-card">
+        <div class="area-img" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=70')"></div>
+        <div class="area-body">
+          <h3>George County</h3>
+          <p>Affordable land and homes in a growing rural community — perfect for families and investors.</p>
+        </div>
+      </article>
+      <article class="area-card area-card-more">
+        <div class="area-body-center">
+          <p class="area-more-icon">📍</p>
+          <h3>+ More Areas</h3>
+          <p>Serving Biloxi, Hattiesburg, and surrounding communities. Just ask!</p>
+          <a href="#contact" class="btn btn-outline-navy btn-sm">Contact Austin</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── About ───────────────────────────────────────────────────────────────── -->
+<section class="section section-light" id="about" aria-label="About Austin Walker">
+  <div class="container about-split">
+    <div class="about-img-wrap">
+      <div class="about-img-placeholder" role="img" aria-label="Austin Walker – Real Estate Agent">
+        <span>AW</span>
+      </div>
+      <div class="about-badge">
+        <span>🏡</span>
         <div>
-          <strong>API Token Required</strong> – Add your HubSpot Private App token to connect live data.
-          Copy <code>.env.example</code> to <code>.env</code> and set <code>HUBSPOT_ACCESS_TOKEN</code>.
-          <a href="https://app-na2.hubspot.com/private-apps/246270512" target="_blank" style="color:var(--hs-orange)">Create a Private App →</a>
+          <strong>Mississippi REALTORS®</strong>
+          <small>Licensed Member</small>
         </div>
       </div>
-
-      <!-- ── Dashboard ──────────────────────────────────────────────── -->
-      <section class="view active" id="view-dashboard">
-        <div class="stats-grid" id="stats-grid">
-          <div class="stat-card">
-            <div class="stat-card-header">
-              <span class="stat-card-label">Contacts</span>
-              <div class="stat-icon orange">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-              </div>
-            </div>
-            <div class="stat-value" id="stat-contacts">–</div>
-            <div class="stat-desc">Total in CRM</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-card-header">
-              <span class="stat-card-label">Companies</span>
-              <div class="stat-icon blue">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 7l9-4 9 4M4 21V9m16 12V9M9 21V9m6 12V9"/></svg>
-              </div>
-            </div>
-            <div class="stat-value" id="stat-companies">–</div>
-            <div class="stat-desc">Total organizations</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-card-header">
-              <span class="stat-card-label">Open Deals</span>
-              <div class="stat-icon purple">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              </div>
-            </div>
-            <div class="stat-value" id="stat-open-deals">–</div>
-            <div class="stat-desc">Active pipeline</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-card-header">
-              <span class="stat-card-label">Revenue Won</span>
-              <div class="stat-icon green">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-              </div>
-            </div>
-            <div class="stat-value" id="stat-won-value">–</div>
-            <div class="stat-desc">Closed won deals</div>
-          </div>
-        </div>
-
-        <div class="cards-row">
-          <!-- Recent Contacts -->
-          <div class="data-card">
-            <div class="data-card-header">
-              <span class="data-card-title">Recent Contacts</span>
-              <span class="data-card-action" onclick="navigate('contacts')">View all →</span>
-            </div>
-            <div class="table-wrap">
-              <table>
-                <thead><tr><th>Name</th><th>Email</th><th>Stage</th></tr></thead>
-                <tbody id="dash-contacts-body">
-                  <tr><td colspan="3"><div class="loading"><div class="spinner"></div> Loading...</div></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <!-- Recent Deals -->
-          <div class="data-card">
-            <div class="data-card-header">
-              <span class="data-card-title">Deals Pipeline</span>
-              <span class="data-card-action" onclick="navigate('deals')">View all →</span>
-            </div>
-            <div class="table-wrap">
-              <table>
-                <thead><tr><th>Deal</th><th>Amount</th><th>Stage</th></tr></thead>
-                <tbody id="dash-deals-body">
-                  <tr><td colspan="3"><div class="loading"><div class="spinner"></div> Loading...</div></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Recent Companies -->
-        <div class="data-card">
-          <div class="data-card-header">
-            <span class="data-card-title">Recent Companies</span>
-            <span class="data-card-action" onclick="navigate('companies')">View all →</span>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Company</th><th>Industry</th><th>Location</th><th>Employees</th><th>Stage</th></tr>
-              </thead>
-              <tbody id="dash-companies-body">
-                <tr><td colspan="5"><div class="loading"><div class="spinner"></div> Loading...</div></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Contacts ───────────────────────────────────────────────── -->
-      <section class="view" id="view-contacts">
-        <div class="page-card">
-          <div class="page-card-header">
-            <span class="page-card-title">Contacts <span id="contacts-total-label" style="font-size:13px;color:var(--text-muted);font-weight:400"></span></span>
-            <div class="search-bar">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <input type="text" id="contacts-search" placeholder="Search by email..." />
-            </div>
-            <button class="btn btn-primary" onclick="openNewContactModal()">
-              <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              Add Contact
-            </button>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Name</th><th>Email</th><th>Phone</th><th>Company</th><th>Lifecycle</th><th>Created</th></tr>
-              </thead>
-              <tbody id="contacts-body">
-                <tr><td colspan="6"><div class="loading"><div class="spinner"></div> Loading...</div></td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="pagination">
-            <span id="contacts-page-info">–</span>
-            <div class="pagination-btns">
-              <button class="page-btn" id="contacts-prev" onclick="contactsPage(-1)" disabled>← Prev</button>
-              <button class="page-btn" id="contacts-next" onclick="contactsPage(1)" disabled>Next →</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Deals ──────────────────────────────────────────────────── -->
-      <section class="view" id="view-deals">
-        <div class="page-card" style="overflow:visible">
-          <div class="page-card-header">
-            <span class="page-card-title">Deals Pipeline <span id="deals-total-label" style="font-size:13px;color:var(--text-muted);font-weight:400"></span></span>
-            <button class="btn btn-primary" onclick="openNewDealModal()">
-              <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              New Deal
-            </button>
-          </div>
-          <div id="pipeline-board" class="pipeline-board">
-            <div class="loading" style="width:100%"><div class="spinner"></div> Loading deals...</div>
-          </div>
-          <div style="padding:16px 20px;border-top:1px solid var(--border)">
-            <table style="width:100%">
-              <thead>
-                <tr><th>Deal Name</th><th>Amount</th><th>Stage</th><th>Close Date</th><th>Probability</th></tr>
-              </thead>
-              <tbody id="deals-body">
-                <tr><td colspan="5"><div class="loading"><div class="spinner"></div> Loading...</div></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Companies ─────────────────────────────────────────────── -->
-      <section class="view" id="view-companies">
-        <div class="page-card">
-          <div class="page-card-header">
-            <span class="page-card-title">Companies <span id="companies-total-label" style="font-size:13px;color:var(--text-muted);font-weight:400"></span></span>
-            <div class="search-bar">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <input type="text" id="companies-search" placeholder="Search by name..." />
-            </div>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Company</th><th>Industry</th><th>Location</th><th>Employees</th><th>Domain</th><th>Stage</th></tr>
-              </thead>
-              <tbody id="companies-body">
-                <tr><td colspan="6"><div class="loading"><div class="spinner"></div> Loading...</div></td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="pagination">
-            <span id="companies-page-info">–</span>
-            <div class="pagination-btns">
-              <button class="page-btn" id="companies-prev" onclick="companiesPage(-1)" disabled>← Prev</button>
-              <button class="page-btn" id="companies-next" onclick="companiesPage(1)" disabled>Next →</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Tasks ──────────────────────────────────────────────────── -->
-      <section class="view" id="view-tasks">
-        <div class="page-card">
-          <div class="page-card-header">
-            <span class="page-card-title">Open Tasks</span>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Subject</th><th>Type</th><th>Priority</th><th>Due Date</th><th>Status</th></tr>
-              </thead>
-              <tbody id="tasks-body">
-                <tr><td colspan="5"><div class="loading"><div class="spinner"></div> Loading...</div></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
     </div>
-  </div>
-</div>
-
-<!-- ── New Contact Modal ──────────────────────────────────────────────────── -->
-<div class="modal-overlay" id="modal-contact">
-  <div class="modal">
-    <div class="modal-header">
-      <span class="modal-title">Add New Contact</span>
-      <button class="modal-close" onclick="closeModal('modal-contact')">×</button>
-    </div>
-    <div class="modal-body">
-      <div class="form-row">
-        <div class="form-group"><label>First Name</label><input id="cf-firstname" placeholder="Jane" /></div>
-        <div class="form-group"><label>Last Name</label><input id="cf-lastname" placeholder="Doe" /></div>
+    <div class="about-copy">
+      <p class="eyebrow">About Your Agent</p>
+      <h2>Austin Walker</h2>
+      <p class="about-tagline">Mississippi Gulf Coast Real Estate Expert</p>
+      <p>Austin Walker is a dedicated real estate professional serving buyers and sellers across the Mississippi Gulf Coast. As a member of both the <strong>Mississippi REALTORS®</strong> and <strong>GCAR Real Estate</strong>, Austin brings deep local market knowledge and an unwavering commitment to his clients' success.</p>
+      <p>Whether you're a first-time homebuyer navigating the market, a growing family searching for more space, or a homeowner ready to maximize your sale price — Austin delivers honest advice, sharp negotiation, and a seamless experience from first showing to final closing.</p>
+      <div class="about-creds">
+        <div class="cred"><strong>Mississippi REALTORS®</strong><span>Member</span></div>
+        <div class="cred"><strong>GCAR</strong><span>Real Estate</span></div>
+        <div class="cred"><strong>Gulf Coast</strong><span>Market Expert</span></div>
       </div>
-      <div class="form-group"><label>Email</label><input id="cf-email" type="email" placeholder="jane@example.com" /></div>
-      <div class="form-group"><label>Phone</label><input id="cf-phone" placeholder="+1 (555) 000-0000" /></div>
-      <div class="form-group"><label>Company</label><input id="cf-company" placeholder="Acme Corp" /></div>
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-secondary" onclick="closeModal('modal-contact')">Cancel</button>
-      <button class="btn btn-primary" onclick="submitContact()">Create Contact</button>
+      <a href="mailto:austinwagent@gmail.com" class="btn btn-primary">Email Austin Directly</a>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ── New Deal Modal ─────────────────────────────────────────────────────── -->
-<div class="modal-overlay" id="modal-deal">
-  <div class="modal">
-    <div class="modal-header">
-      <span class="modal-title">Create New Deal</span>
-      <button class="modal-close" onclick="closeModal('modal-deal')">×</button>
+<!-- ── Seller Lead Form ────────────────────────────────────────────────────── -->
+<section class="section seller-section" id="sell" aria-label="Seller lead form">
+  <div class="container cta-split cta-split-reverse">
+    <div class="cta-copy">
+      <p class="eyebrow-light">For Sellers</p>
+      <h2>What's Your Home Worth?</h2>
+      <p>Get a free, no-obligation Comparative Market Analysis (CMA). Austin analyzes recent sales, current inventory, and local trends to tell you exactly what your home could sell for <em>today</em>.</p>
+      <ul class="cta-benefits">
+        <li>✓ Free, detailed home valuation</li>
+        <li>✓ No obligation, no pressure</li>
+        <li>✓ Expert marketing strategy</li>
+        <li>✓ Maximum sale price approach</li>
+      </ul>
     </div>
-    <div class="modal-body">
-      <div class="form-group"><label>Deal Name</label><input id="df-name" placeholder="e.g. 123 Main Street" /></div>
+    <div class="cta-form-wrap">
+      <form class="lead-form" id="seller-form" data-lead-type="Seller" novalidate>
+        <h3 class="form-title">Get My Free Home Value</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="s-fname">First Name *</label>
+            <input type="text" id="s-fname" name="firstname" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label for="s-lname">Last Name</label>
+            <input type="text" id="s-lname" name="lastname" placeholder="Smith" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="s-email">Email Address *</label>
+          <input type="email" id="s-email" name="email" placeholder="john@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="s-phone">Phone Number</label>
+          <input type="tel" id="s-phone" name="phone" placeholder="(228) 555-0100" />
+        </div>
+        <div class="form-group">
+          <label for="s-address">Property Address *</label>
+          <input type="text" id="s-address" name="propertyAddress" placeholder="123 Main St, Lucedale, MS" required />
+        </div>
+        <div class="form-group">
+          <label for="s-timeline">When are you looking to sell?</label>
+          <select id="s-timeline" name="timeline">
+            <option value="">Select timeline…</option>
+            <option>ASAP (within 30 days)</option>
+            <option>1–3 months</option>
+            <option>3–6 months</option>
+            <option>6–12 months</option>
+            <option>Just curious about value</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Get My Free Valuation →</button>
+        <p class="form-disclaimer">100% free. No obligation. No spam.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── Testimonials ────────────────────────────────────────────────────────── -->
+<section class="section section-light" id="testimonials" aria-label="Client testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">What Clients Are Saying</h2>
+      <p class="section-sub">Real feedback from real Mississippi homeowners and buyers.</p>
+    </div>
+    <div class="testimonials-grid">
+      <blockquote class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"Austin made buying our first home a stress-free experience. He was always available to answer our questions and fought hard to get us the best price. We couldn't be happier!"</p>
+        <footer>
+          <strong>Sarah & Marcus B.</strong>
+          <span>Lucedale, MS · First-time Buyers</span>
+        </footer>
+      </blockquote>
+      <blockquote class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"We listed with Austin after struggling to sell on our own. He had multiple offers within two weeks and we closed above asking price. His local knowledge is unmatched."</p>
+        <footer>
+          <strong>David R.</strong>
+          <span>Ocean Springs, MS · Home Seller</span>
+        </footer>
+      </blockquote>
+      <blockquote class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"Relocating from out of state is daunting, but Austin made it seamless. He knew every neighborhood, every school district, and found us the perfect home on the Gulf Coast."</p>
+        <footer>
+          <strong>The Hendersons</strong>
+          <span>Gulfport, MS · Relocation Buyers</span>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ─────────────────────────────────────────────────────────────── -->
+<section class="section section-navy" id="contact" aria-label="Contact Austin Walker">
+  <div class="container contact-wrap">
+    <div class="contact-copy">
+      <h2>Ready to Talk?</h2>
+      <p>Reach Austin directly — no assistants, no call centers. Just straightforward real estate advice from a local expert who cares.</p>
+      <div class="contact-items">
+        <a href="mailto:austinwagent@gmail.com" class="contact-item">
+          <span class="contact-icon">✉</span>
+          <span>austinwagent@gmail.com</span>
+        </a>
+        <a href="https://app-na2.hubspot.com/contacts/246270512" target="_blank" rel="noopener" class="contact-item">
+          <span class="contact-icon">📋</span>
+          <span>View CRM Dashboard</span>
+        </a>
+      </div>
+    </div>
+    <form class="lead-form lead-form-dark" id="contact-form" data-lead-type="General Inquiry" novalidate>
+      <h3 class="form-title">Send a Message</h3>
       <div class="form-row">
-        <div class="form-group"><label>Amount (USD)</label><input id="df-amount" type="number" placeholder="250000" /></div>
-        <div class="form-group"><label>Close Date</label><input id="df-closedate" type="date" /></div>
+        <div class="form-group">
+          <label for="c-fname">First Name *</label>
+          <input type="text" id="c-fname" name="firstname" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="c-lname">Last Name</label>
+          <input type="text" id="c-lname" name="lastname" />
+        </div>
       </div>
       <div class="form-group">
-        <label>Stage</label>
-        <select id="df-stage">
-          <option value="appointmentscheduled">Appointment Scheduled</option>
-          <option value="qualifiedtobuy">Qualified to Buy</option>
-          <option value="presentationscheduled">Presentation Scheduled</option>
-          <option value="decisionmakerboughtin">Decision Maker Bought-In</option>
-          <option value="contractsent">Contract Sent</option>
-          <option value="closedwon">Closed Won</option>
-          <option value="closedlost">Closed Lost</option>
-        </select>
+        <label for="c-email">Email *</label>
+        <input type="email" id="c-email" name="email" placeholder="you@example.com" required />
       </div>
+      <div class="form-group">
+        <label for="c-phone">Phone</label>
+        <input type="tel" id="c-phone" name="phone" />
+      </div>
+      <div class="form-group">
+        <label for="c-message">Message</label>
+        <textarea id="c-message" name="message" rows="4" placeholder="How can Austin help you?"></textarea>
+      </div>
+      <button type="submit" class="btn btn-gold btn-full">Send Message →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <span class="nav-brand-icon">AW</span>
+        <div>
+          <strong>Austin Walker Real Estate</strong>
+          <small>Mississippi Gulf Coast</small>
+        </div>
+      </div>
+      <p>Helping Mississippi families buy and sell homes with confidence. Licensed REALTOR® serving the Gulf Coast.</p>
     </div>
-    <div class="modal-footer">
-      <button class="btn btn-secondary" onclick="closeModal('modal-deal')">Cancel</button>
-      <button class="btn btn-primary" onclick="submitDeal()">Create Deal</button>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#listings">Active Listings</a></li>
+        <li><a href="#buy">Start Your Search</a></li>
+        <li><a href="#sell">Sell Your Home</a></li>
+        <li><a href="#about">About Austin</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Areas Served</h4>
+      <ul>
+        <li>Lucedale, MS</li>
+        <li>Gulfport, MS</li>
+        <li>Ocean Springs, MS</li>
+        <li>Jackson County, MS</li>
+        <li>George County, MS</li>
+        <li>Biloxi, MS</li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:austinwagent@gmail.com">austinwagent@gmail.com</a></li>
+        <li>Mississippi Gulf Coast</li>
+        <li>Licensed in Mississippi</li>
+      </ul>
     </div>
   </div>
-</div>
+  <div class="footer-bottom container">
+    <p>&copy; 2026 Austin Walker Real Estate. All rights reserved. | Licensed Mississippi REALTOR®</p>
+    <p class="footer-disclaimer">All information is deemed reliable but not guaranteed. Listings subject to change without notice.</p>
+  </div>
+</footer>
 
-<!-- ── Toasts ─────────────────────────────────────────────────────────────── -->
-<div class="toast-container" id="toasts"></div>
+<!-- ── Toast Notifications ────────────────────────────────────────────────── -->
+<div id="toast-container" class="toast-container" aria-live="polite"></div>
 
-<script src="/js/app.js"></script>
+<!-- ── HubSpot Tracking Pixel ────────────────────────────────────────────── -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/246270512.js"></script>
+
+<script src="/js/main.js"></script>
 </body>
 </html>
